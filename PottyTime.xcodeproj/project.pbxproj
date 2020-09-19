@@ -1,0 +1,959 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19ACB38F2515549800B10785 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACB38E2515549800B10785 /* AppDelegate.swift */; };
+		19ACB3912515549800B10785 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACB3902515549800B10785 /* SceneDelegate.swift */; };
+		19ACB3932515549800B10785 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACB3922515549800B10785 /* ContentView.swift */; };
+		19ACB395251554A200B10785 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19ACB394251554A200B10785 /* Assets.xcassets */; };
+		19ACB398251554A200B10785 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19ACB397251554A200B10785 /* Preview Assets.xcassets */; };
+		19ACB39B251554A200B10785 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19ACB399251554A200B10785 /* LaunchScreen.storyboard */; };
+		19ACB3A6251554A300B10785 /* PottyTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACB3A5251554A300B10785 /* PottyTimeTests.swift */; };
+		19ACB3B1251554A300B10785 /* PottyTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACB3B0251554A300B10785 /* PottyTimeUITests.swift */; };
+		19ACB3C4251555EA00B10785 /* PottyTime-watch WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 19ACB3C3251555EA00B10785 /* PottyTime-watch WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		19ACB3CA251555EA00B10785 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19ACB3C8251555EA00B10785 /* Interface.storyboard */; };
+		19ACB3CC251555EB00B10785 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19ACB3CB251555EB00B10785 /* Assets.xcassets */; };
+		19ACB3D3251555EB00B10785 /* PottyTime-watch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 19ACB3D2251555EB00B10785 /* PottyTime-watch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		19ACB3D8251555EB00B10785 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACB3D7251555EB00B10785 /* ContentView.swift */; };
+		19ACB3DA251555EB00B10785 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACB3D9251555EB00B10785 /* HostingController.swift */; };
+		19ACB3DC251555EB00B10785 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACB3DB251555EB00B10785 /* ExtensionDelegate.swift */; };
+		19ACB3DE251555EB00B10785 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACB3DD251555EB00B10785 /* NotificationController.swift */; };
+		19ACB3E0251555EB00B10785 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACB3DF251555EB00B10785 /* NotificationView.swift */; };
+		19ACB3E2251555EC00B10785 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19ACB3E1251555EC00B10785 /* Assets.xcassets */; };
+		19ACB3E5251555EC00B10785 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19ACB3E4251555EC00B10785 /* Preview Assets.xcassets */; };
+		19ACB3F42515592A00B10785 /* PottyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACB3F32515592A00B10785 /* PottyData.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		19ACB3A2251554A300B10785 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19ACB3832515549800B10785 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19ACB38A2515549800B10785;
+			remoteInfo = PottyTime;
+		};
+		19ACB3AD251554A300B10785 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19ACB3832515549800B10785 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19ACB38A2515549800B10785;
+			remoteInfo = PottyTime;
+		};
+		19ACB3C5251555EA00B10785 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19ACB3832515549800B10785 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19ACB3C2251555EA00B10785;
+			remoteInfo = "PottyTime-watch WatchKit App";
+		};
+		19ACB3D4251555EB00B10785 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19ACB3832515549800B10785 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19ACB3D1251555EB00B10785;
+			remoteInfo = "PottyTime-watch WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		19ACB3EB251555EC00B10785 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				19ACB3D3251555EB00B10785 /* PottyTime-watch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ACB3EF251555EC00B10785 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				19ACB3C4251555EA00B10785 /* PottyTime-watch WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		19ACB38B2515549800B10785 /* PottyTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PottyTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19ACB38E2515549800B10785 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		19ACB3902515549800B10785 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		19ACB3922515549800B10785 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		19ACB394251554A200B10785 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		19ACB397251554A200B10785 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		19ACB39A251554A200B10785 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		19ACB39C251554A200B10785 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19ACB3A1251554A300B10785 /* PottyTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PottyTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		19ACB3A5251554A300B10785 /* PottyTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PottyTimeTests.swift; sourceTree = "<group>"; };
+		19ACB3A7251554A300B10785 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19ACB3AC251554A300B10785 /* PottyTimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PottyTimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		19ACB3B0251554A300B10785 /* PottyTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PottyTimeUITests.swift; sourceTree = "<group>"; };
+		19ACB3B2251554A300B10785 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19ACB3C0251555EA00B10785 /* PottyTime-watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PottyTime-watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		19ACB3C3251555EA00B10785 /* PottyTime-watch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PottyTime-watch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		19ACB3C9251555EA00B10785 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		19ACB3CB251555EB00B10785 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		19ACB3CD251555EB00B10785 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19ACB3D2251555EB00B10785 /* PottyTime-watch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PottyTime-watch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		19ACB3D7251555EB00B10785 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		19ACB3D9251555EB00B10785 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		19ACB3DB251555EB00B10785 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		19ACB3DD251555EB00B10785 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		19ACB3DF251555EB00B10785 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		19ACB3E1251555EC00B10785 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		19ACB3E4251555EC00B10785 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		19ACB3E6251555EC00B10785 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19ACB3E7251555EC00B10785 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		19ACB3F32515592A00B10785 /* PottyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PottyData.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19ACB3882515549800B10785 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ACB39E251554A300B10785 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ACB3A9251554A300B10785 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ACB3CF251555EB00B10785 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19ACB3822515549800B10785 = {
+			isa = PBXGroup;
+			children = (
+				19ACB38D2515549800B10785 /* PottyTime */,
+				19ACB3A4251554A300B10785 /* PottyTimeTests */,
+				19ACB3AF251554A300B10785 /* PottyTimeUITests */,
+				19ACB3C7251555EA00B10785 /* PottyTime-watch WatchKit App */,
+				19ACB3D6251555EB00B10785 /* PottyTime-watch WatchKit Extension */,
+				19ACB38C2515549800B10785 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		19ACB38C2515549800B10785 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19ACB38B2515549800B10785 /* PottyTime.app */,
+				19ACB3A1251554A300B10785 /* PottyTimeTests.xctest */,
+				19ACB3AC251554A300B10785 /* PottyTimeUITests.xctest */,
+				19ACB3C0251555EA00B10785 /* PottyTime-watch.app */,
+				19ACB3C3251555EA00B10785 /* PottyTime-watch WatchKit App.app */,
+				19ACB3D2251555EB00B10785 /* PottyTime-watch WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19ACB38D2515549800B10785 /* PottyTime */ = {
+			isa = PBXGroup;
+			children = (
+				19ACB38E2515549800B10785 /* AppDelegate.swift */,
+				19ACB3902515549800B10785 /* SceneDelegate.swift */,
+				19ACB3922515549800B10785 /* ContentView.swift */,
+				19ACB394251554A200B10785 /* Assets.xcassets */,
+				19ACB399251554A200B10785 /* LaunchScreen.storyboard */,
+				19ACB39C251554A200B10785 /* Info.plist */,
+				19ACB396251554A200B10785 /* Preview Content */,
+			);
+			path = PottyTime;
+			sourceTree = "<group>";
+		};
+		19ACB396251554A200B10785 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				19ACB397251554A200B10785 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		19ACB3A4251554A300B10785 /* PottyTimeTests */ = {
+			isa = PBXGroup;
+			children = (
+				19ACB3A5251554A300B10785 /* PottyTimeTests.swift */,
+				19ACB3A7251554A300B10785 /* Info.plist */,
+			);
+			path = PottyTimeTests;
+			sourceTree = "<group>";
+		};
+		19ACB3AF251554A300B10785 /* PottyTimeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				19ACB3B0251554A300B10785 /* PottyTimeUITests.swift */,
+				19ACB3B2251554A300B10785 /* Info.plist */,
+			);
+			path = PottyTimeUITests;
+			sourceTree = "<group>";
+		};
+		19ACB3C7251555EA00B10785 /* PottyTime-watch WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				19ACB3C8251555EA00B10785 /* Interface.storyboard */,
+				19ACB3CB251555EB00B10785 /* Assets.xcassets */,
+				19ACB3CD251555EB00B10785 /* Info.plist */,
+			);
+			path = "PottyTime-watch WatchKit App";
+			sourceTree = "<group>";
+		};
+		19ACB3D6251555EB00B10785 /* PottyTime-watch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				19ACB3D7251555EB00B10785 /* ContentView.swift */,
+				19ACB3D9251555EB00B10785 /* HostingController.swift */,
+				19ACB3DB251555EB00B10785 /* ExtensionDelegate.swift */,
+				19ACB3DD251555EB00B10785 /* NotificationController.swift */,
+				19ACB3DF251555EB00B10785 /* NotificationView.swift */,
+				19ACB3E1251555EC00B10785 /* Assets.xcassets */,
+				19ACB3E6251555EC00B10785 /* Info.plist */,
+				19ACB3E7251555EC00B10785 /* PushNotificationPayload.apns */,
+				19ACB3E3251555EC00B10785 /* Preview Content */,
+				19ACB3F32515592A00B10785 /* PottyData.swift */,
+			);
+			path = "PottyTime-watch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		19ACB3E3251555EC00B10785 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				19ACB3E4251555EC00B10785 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		19ACB38A2515549800B10785 /* PottyTime */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19ACB3B5251554A300B10785 /* Build configuration list for PBXNativeTarget "PottyTime" */;
+			buildPhases = (
+				19ACB3872515549800B10785 /* Sources */,
+				19ACB3882515549800B10785 /* Frameworks */,
+				19ACB3892515549800B10785 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PottyTime;
+			productName = PottyTime;
+			productReference = 19ACB38B2515549800B10785 /* PottyTime.app */;
+			productType = "com.apple.product-type.application";
+		};
+		19ACB3A0251554A300B10785 /* PottyTimeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19ACB3B8251554A300B10785 /* Build configuration list for PBXNativeTarget "PottyTimeTests" */;
+			buildPhases = (
+				19ACB39D251554A300B10785 /* Sources */,
+				19ACB39E251554A300B10785 /* Frameworks */,
+				19ACB39F251554A300B10785 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19ACB3A3251554A300B10785 /* PBXTargetDependency */,
+			);
+			name = PottyTimeTests;
+			productName = PottyTimeTests;
+			productReference = 19ACB3A1251554A300B10785 /* PottyTimeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		19ACB3AB251554A300B10785 /* PottyTimeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19ACB3BB251554A300B10785 /* Build configuration list for PBXNativeTarget "PottyTimeUITests" */;
+			buildPhases = (
+				19ACB3A8251554A300B10785 /* Sources */,
+				19ACB3A9251554A300B10785 /* Frameworks */,
+				19ACB3AA251554A300B10785 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19ACB3AE251554A300B10785 /* PBXTargetDependency */,
+			);
+			name = PottyTimeUITests;
+			productName = PottyTimeUITests;
+			productReference = 19ACB3AC251554A300B10785 /* PottyTimeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		19ACB3BF251555EA00B10785 /* PottyTime-watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19ACB3F0251555EC00B10785 /* Build configuration list for PBXNativeTarget "PottyTime-watch" */;
+			buildPhases = (
+				19ACB3BE251555EA00B10785 /* Resources */,
+				19ACB3EF251555EC00B10785 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19ACB3C6251555EA00B10785 /* PBXTargetDependency */,
+			);
+			name = "PottyTime-watch";
+			productName = "PottyTime-watch";
+			productReference = 19ACB3C0251555EA00B10785 /* PottyTime-watch.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		19ACB3C2251555EA00B10785 /* PottyTime-watch WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19ACB3EC251555EC00B10785 /* Build configuration list for PBXNativeTarget "PottyTime-watch WatchKit App" */;
+			buildPhases = (
+				19ACB3C1251555EA00B10785 /* Resources */,
+				19ACB3EB251555EC00B10785 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19ACB3D5251555EB00B10785 /* PBXTargetDependency */,
+			);
+			name = "PottyTime-watch WatchKit App";
+			productName = "PottyTime-watch WatchKit App";
+			productReference = 19ACB3C3251555EA00B10785 /* PottyTime-watch WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		19ACB3D1251555EB00B10785 /* PottyTime-watch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19ACB3E8251555EC00B10785 /* Build configuration list for PBXNativeTarget "PottyTime-watch WatchKit Extension" */;
+			buildPhases = (
+				19ACB3CE251555EB00B10785 /* Sources */,
+				19ACB3CF251555EB00B10785 /* Frameworks */,
+				19ACB3D0251555EB00B10785 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PottyTime-watch WatchKit Extension";
+			productName = "PottyTime-watch WatchKit Extension";
+			productReference = 19ACB3D2251555EB00B10785 /* PottyTime-watch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		19ACB3832515549800B10785 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1170;
+				LastUpgradeCheck = 1170;
+				ORGANIZATIONNAME = Zach;
+				TargetAttributes = {
+					19ACB38A2515549800B10785 = {
+						CreatedOnToolsVersion = 11.7;
+					};
+					19ACB3A0251554A300B10785 = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 19ACB38A2515549800B10785;
+					};
+					19ACB3AB251554A300B10785 = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 19ACB38A2515549800B10785;
+					};
+					19ACB3BF251555EA00B10785 = {
+						CreatedOnToolsVersion = 11.7;
+					};
+					19ACB3C2251555EA00B10785 = {
+						CreatedOnToolsVersion = 11.7;
+					};
+					19ACB3D1251555EB00B10785 = {
+						CreatedOnToolsVersion = 11.7;
+					};
+				};
+			};
+			buildConfigurationList = 19ACB3862515549800B10785 /* Build configuration list for PBXProject "PottyTime" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 19ACB3822515549800B10785;
+			productRefGroup = 19ACB38C2515549800B10785 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				19ACB38A2515549800B10785 /* PottyTime */,
+				19ACB3A0251554A300B10785 /* PottyTimeTests */,
+				19ACB3AB251554A300B10785 /* PottyTimeUITests */,
+				19ACB3BF251555EA00B10785 /* PottyTime-watch */,
+				19ACB3C2251555EA00B10785 /* PottyTime-watch WatchKit App */,
+				19ACB3D1251555EB00B10785 /* PottyTime-watch WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19ACB3892515549800B10785 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19ACB39B251554A200B10785 /* LaunchScreen.storyboard in Resources */,
+				19ACB398251554A200B10785 /* Preview Assets.xcassets in Resources */,
+				19ACB395251554A200B10785 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ACB39F251554A300B10785 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ACB3AA251554A300B10785 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ACB3BE251555EA00B10785 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ACB3C1251555EA00B10785 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19ACB3CC251555EB00B10785 /* Assets.xcassets in Resources */,
+				19ACB3CA251555EA00B10785 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ACB3D0251555EB00B10785 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19ACB3E5251555EC00B10785 /* Preview Assets.xcassets in Resources */,
+				19ACB3E2251555EC00B10785 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19ACB3872515549800B10785 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19ACB38F2515549800B10785 /* AppDelegate.swift in Sources */,
+				19ACB3912515549800B10785 /* SceneDelegate.swift in Sources */,
+				19ACB3932515549800B10785 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ACB39D251554A300B10785 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19ACB3A6251554A300B10785 /* PottyTimeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ACB3A8251554A300B10785 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19ACB3B1251554A300B10785 /* PottyTimeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ACB3CE251555EB00B10785 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19ACB3F42515592A00B10785 /* PottyData.swift in Sources */,
+				19ACB3DA251555EB00B10785 /* HostingController.swift in Sources */,
+				19ACB3D8251555EB00B10785 /* ContentView.swift in Sources */,
+				19ACB3DE251555EB00B10785 /* NotificationController.swift in Sources */,
+				19ACB3DC251555EB00B10785 /* ExtensionDelegate.swift in Sources */,
+				19ACB3E0251555EB00B10785 /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		19ACB3A3251554A300B10785 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19ACB38A2515549800B10785 /* PottyTime */;
+			targetProxy = 19ACB3A2251554A300B10785 /* PBXContainerItemProxy */;
+		};
+		19ACB3AE251554A300B10785 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19ACB38A2515549800B10785 /* PottyTime */;
+			targetProxy = 19ACB3AD251554A300B10785 /* PBXContainerItemProxy */;
+		};
+		19ACB3C6251555EA00B10785 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19ACB3C2251555EA00B10785 /* PottyTime-watch WatchKit App */;
+			targetProxy = 19ACB3C5251555EA00B10785 /* PBXContainerItemProxy */;
+		};
+		19ACB3D5251555EB00B10785 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19ACB3D1251555EB00B10785 /* PottyTime-watch WatchKit Extension */;
+			targetProxy = 19ACB3D4251555EB00B10785 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		19ACB399251554A200B10785 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19ACB39A251554A200B10785 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		19ACB3C8251555EA00B10785 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19ACB3C9251555EA00B10785 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		19ACB3B3251554A300B10785 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		19ACB3B4251554A300B10785 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		19ACB3B6251554A300B10785 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"PottyTime/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = PottyTime/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ZaNiels.PottyTime;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		19ACB3B7251554A300B10785 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"PottyTime/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = PottyTime/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ZaNiels.PottyTime;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		19ACB3B9251554A300B10785 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PottyTimeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ZaNiels.PottyTimeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PottyTime.app/PottyTime";
+			};
+			name = Debug;
+		};
+		19ACB3BA251554A300B10785 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PottyTimeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ZaNiels.PottyTimeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PottyTime.app/PottyTime";
+			};
+			name = Release;
+		};
+		19ACB3BC251554A300B10785 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PottyTimeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ZaNiels.PottyTimeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PottyTime;
+			};
+			name = Debug;
+		};
+		19ACB3BD251554A300B10785 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PottyTimeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ZaNiels.PottyTimeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PottyTime;
+			};
+			name = Release;
+		};
+		19ACB3E9251555EC00B10785 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"PottyTime-watch WatchKit Extension/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "PottyTime-watch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ZaNiels.PottyTime-watch.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Debug;
+		};
+		19ACB3EA251555EC00B10785 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"PottyTime-watch WatchKit Extension/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "PottyTime-watch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ZaNiels.PottyTime-watch.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Release;
+		};
+		19ACB3ED251555EC00B10785 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = PottyTime_watch_WatchKit_Extension;
+				INFOPLIST_FILE = "PottyTime-watch WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "ZaNiels.PottyTime-watch.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Debug;
+		};
+		19ACB3EE251555EC00B10785 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = PottyTime_watch_WatchKit_Extension;
+				INFOPLIST_FILE = "PottyTime-watch WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "ZaNiels.PottyTime-watch.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Release;
+		};
+		19ACB3F1251555EC00B10785 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ZaNiels.PottyTime-watch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		19ACB3F2251555EC00B10785 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ZaNiels.PottyTime-watch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		19ACB3862515549800B10785 /* Build configuration list for PBXProject "PottyTime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19ACB3B3251554A300B10785 /* Debug */,
+				19ACB3B4251554A300B10785 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19ACB3B5251554A300B10785 /* Build configuration list for PBXNativeTarget "PottyTime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19ACB3B6251554A300B10785 /* Debug */,
+				19ACB3B7251554A300B10785 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19ACB3B8251554A300B10785 /* Build configuration list for PBXNativeTarget "PottyTimeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19ACB3B9251554A300B10785 /* Debug */,
+				19ACB3BA251554A300B10785 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19ACB3BB251554A300B10785 /* Build configuration list for PBXNativeTarget "PottyTimeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19ACB3BC251554A300B10785 /* Debug */,
+				19ACB3BD251554A300B10785 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19ACB3E8251555EC00B10785 /* Build configuration list for PBXNativeTarget "PottyTime-watch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19ACB3E9251555EC00B10785 /* Debug */,
+				19ACB3EA251555EC00B10785 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19ACB3EC251555EC00B10785 /* Build configuration list for PBXNativeTarget "PottyTime-watch WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19ACB3ED251555EC00B10785 /* Debug */,
+				19ACB3EE251555EC00B10785 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19ACB3F0251555EC00B10785 /* Build configuration list for PBXNativeTarget "PottyTime-watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19ACB3F1251555EC00B10785 /* Debug */,
+				19ACB3F2251555EC00B10785 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 19ACB3832515549800B10785 /* Project object */;
+}

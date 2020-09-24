@@ -9,22 +9,34 @@
 import SwiftUI
 
 struct ContentView: View {
+    var pd = PottyData(coder: NSCoder())
     var body: some View {
-        VStack {
+        ScrollView { VStack {
             Button(action: {
+                print("Logging new Pee")
+                self.pd?.newMovement(type: PottyType.pee)
                 print("Logged new Pee")
-                PottyData.newMovement(PottyType.pee)
-                
             }) {
                 Text("Pee")
             }
             Button(action: {
+                print("Logging new Poop")
+                self.pd?.newMovement(type: PottyType.poop)
                 print("Logged new Poop")
-                PottyData.newMovement(PottyType.poop)
             }) {
                 Text("Poop")
             }
-        }
+            Button(action: {
+                print("Showing Potties")
+            }) {
+                Text("Show All")
+            }
+            Button(action: {
+                print("Deleting All Potties")
+            }) {
+                Text("Clear Data")
+            }
+        } }
     }
 }
 

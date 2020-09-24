@@ -26,38 +26,38 @@ struct Potty {
 }
 
 class PottyData : NSObject, NSCoding {
-    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
-    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("meals")
-    static let m_path: String = Bundle.main.bundlePath;
-    
     var m_potties: [Potty]
-    init(potties: [Potty]) {
-        m_potties = potties
+    var m_data: Data
+    var m_archiver: NSKeyedArchiver
+    override init() {
+        m_potties = []
+        m_archiver = NSKeyedArchiver(requiringSecureCoding: false)
+        m_data = Data()
     }
     required convenience init?(coder aDecoder: NSCoder) {
-        guard let potties = aDecoder.decodeObject(forKey: PottyKeys.potties) as? [Potty] else {
+        self.init()
+        guard let potties = try! NSKeyedUnarchiver(forReadingFrom: m_data).decodeObject(forKey: PottyKeys.potties) as? [Potty] else {
             os_log("Unable to decode the name for a Meal object.", log: OSLog.default, type: .debug)
             return nil
         }
-        self.init(potties: potties)
+        self.setPotties(potties: potties)
     }
+    func setPotties(potties: [Potty]) { m_potties = potties }
+    
     func encode(with aCoder: NSCoder) {
         aCoder.encode(m_potties, forKey: PottyKeys.potties)
     }
     
-    func loadPottiesFromFile() -> [Potty] {
-        let data = Data()
-        var unarchiver: NSKeyedUnarchiver
-        do { unarchiver = try NSKeyedUnarchiver(forReadingFrom: data) } catch _ {}
-    }
     func newMovement(type: PottyType) {
-        m_potties.append((Date(), type))
-        writeEntriesToFile()
+        let potty = Potty(time: Date(), type: type)
+        m_potties.append(potty)
+        writePottiesToFile()
     }
-    func writeEntriesToFile() {
-        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(m_data, toFile: PottyData.ArchiveURL.path)
+    
+    func writePottiesToFile() {
+        m_archiver.encode(m_potties, forKey: PottyKeys.potties)
     }
-    func clear() {
+    func clearAllData() {
         
     }
 }

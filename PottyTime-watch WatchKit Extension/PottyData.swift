@@ -60,7 +60,18 @@ class PottyData {
     }
     func setPotties(potties: [Potty]) { m_potties = potties }
     func getPotties() -> [String] {
-        return ["test", "another test"]
+        var ret: [String] = []
+        for potty in m_potties {
+            ret.append(potty.stringify())
+        }
+        return ret
+    }
+    static func arrayToLines(strs: [String]) -> String {
+        var ret: String = ""
+        for str in strs {
+            ret.append("\(str)\n")
+        }
+        return ret
     }
     
     func newMovement(type: PottyType) {
@@ -74,6 +85,7 @@ class PottyData {
         try! str.write(to: m_url, atomically: false, encoding: .utf8)
     }
     func clearAllData() {
-        
+        m_potties.removeAll()
+        try! "".write(to: m_url, atomically: false, encoding: .utf8)
     }
 }

@@ -18,44 +18,60 @@ struct PottyKeys {
 enum PottyType {
     case pee
     case poop
+    
+    static func destring(str: String) -> PottyType {
+        return str.lowercased() == "pee" ? PottyType.pee : PottyType.poop
+    }
 }
 
 struct Potty {
     var time: Date
     var type: PottyType
+    let dateFormatString =  "MMM dd HH.mm"
+    
+    func stringify() -> String {
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = dateFormatString
+        let typeString = self.type == PottyType.pee ? "Pee" : "Poop"
+        return "Time: \(dateFormatterPrint.string(from: time)), Type: \(typeString)"
+    }
+    static func destring(str: String) -> Potty? {
+        let splits = str.split(separator: ":")
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.dateFormat = "dateFormatString"
+        return Potty(time: dateFormatter.date(from: String(splits[1]))!, type: PottyType.destring(str: String(splits[3])))
+    }
 }
 
-class PottyData : NSObject, NSCoding {
+class PottyData {
+    let m_url: URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("pottyfile.txt")
     var m_potties: [Potty]
-    var m_data: Data
-    var m_archiver: NSKeyedArchiver
-    override init() {
+    init() {
         m_potties = []
-        m_archiver = NSKeyedArchiver(requiringSecureCoding: false)
-        m_data = Data()
-    }
-    required convenience init?(coder aDecoder: NSCoder) {
-        self.init()
-        guard let potties = try! NSKeyedUnarchiver(forReadingFrom: m_data).decodeObject(forKey: PottyKeys.potties) as? [Potty] else {
-            os_log("Unable to decode the name for a Meal object.", log: OSLog.default, type: .debug)
-            return nil
+        let fileManager = FileManager.default
+        if fileManager.fileExists(atPath: m_url.absoluteString) {
+            let data = try! String(contentsOf: m_url, encoding: .utf8)
+            let lines = data.split(separator: "\n")
+            for line in lines {
+                m_potties.append(Potty.destring(str: String(line))!)
+            }
         }
-        self.setPotties(potties: potties)
     }
     func setPotties(potties: [Potty]) { m_potties = potties }
-    
-    func encode(with aCoder: NSCoder) {
-        aCoder.encode(m_potties, forKey: PottyKeys.potties)
+    func getPotties() -> [String] {
+        return ["test", "another test"]
     }
     
     func newMovement(type: PottyType) {
         let potty = Potty(time: Date(), type: type)
         m_potties.append(potty)
-        writePottiesToFile()
+        appendPottyToFile(potty: potty)
     }
     
-    func writePottiesToFile() {
-        m_archiver.encode(m_potties, forKey: PottyKeys.potties)
+    func appendPottyToFile(potty: Potty) {
+        let str = potty.stringify()
+        try! str.write(to: m_url, atomically: false, encoding: .utf8)
     }
     func clearAllData() {
         

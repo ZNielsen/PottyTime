@@ -40,13 +40,15 @@ struct ContentView: View {
             }
             Button(action: {
                 print("Deleting All Potties")
-                pd.clearAllData()
                 self.clearDataAlert = true
             }) {
                 Text("Clear Data")
             }
             .alert(isPresented: $clearDataAlert) {
-                return Alert(title: Text("Data Cleared"), message: Text("All Data Cleared"), dismissButton: .default(Text("Got it!")))
+                return Alert(title: Text("Confirm"), message: Text("Clear all data?"), primaryButton: .destructive(Text("Delete")) {
+                        pd.clearAllData()
+                    print("Cleared all potties")
+                    }, secondaryButton: .cancel())
 
             }
         } }
